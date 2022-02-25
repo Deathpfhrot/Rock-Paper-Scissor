@@ -1,0 +1,46 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+body {
+    background-color: #b1bee8;
+}
+
+header {
+    text-align: center;
+    color: white;
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+main section {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10rem 0 10rem 0;
+}
+
+main section h1 {
+    font-size: 3.5rem;
+}
+
+main section img {
+    width: 30%;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-size: 2.5rem;
+    border: 3px solid white;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    &:hover {
+        transform: scale(1.25);
+    }
+}

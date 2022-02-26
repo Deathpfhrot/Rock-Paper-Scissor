@@ -45,7 +45,41 @@ let counterPC = 0;
 let playerOne = document.getElementById('playerOne')
 let playerComputer = document.getElementById('player-computer')
 
+
+
+let amountOfTries = undefined;
+let roundRemoves = document.getElementById('roundRemoves')
+let roundRemoves2 = document.getElementById('roundRemoves2')
+let headline = document.getElementById('headline')
+let guessCount = 1;
+
+
+setTries = (amount) => {
+    amountOfTries = amount;
+    console.log(amountOfTries);
+    roundRemoves.classList.add('invisible')
+    roundRemoves.classList.remove('container-rounds')
+    roundRemoves2.classList.add('invisible')
+    roundRemoves2.classList.remove('container-rounds')
+    printGuessTries(guessCount);
+}
+
+printGuessTries = (number) => {
+    headline.innerHTML = `
+    ${number} / ${amountOfTries}`
+}
+
 function getResult() {
+
+
+    guessCount++
+
+    if (gameOver()) {
+        return;
+    }
+
+    printGuessTries(guessCount)
+
     if (computerChoice === 'rock' && userChoice === 'paper') {
         resultDisplay.innerHTML = ' You won!'
         counterPO++
@@ -77,4 +111,24 @@ function getResult() {
         playerOne.innerHTML = counterPO
         playerComputer.innerHTML = counterPC
     }
+}
+let finisher = document.getElementById('finisher')
+
+gameOver = () => {
+    if (guessCount > amountOfTries) {
+        finisher.innerHTML = `<h3>Game Over</h3>`
+        if (counterPC > counterPO) {
+            finisher.innerHTML += `<p>Sorry you lose : /</p>`
+        }
+        if (counterPC < counterPO) {
+            finisher.innerHTML += `<p>Awsome you won!</p>`
+        }
+        if (counterPC == counterPO) {
+            finisher.innerHTML = `Today nobody lose nor wins`
+        }
+        return true;
+
+    }
+    return false;
+
 }

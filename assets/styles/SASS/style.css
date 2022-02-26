@@ -127,4 +127,8 @@ form .rounds-question-1 a {
   display: block;
   padding: 1rem;
   color: gold;
+}
+
+.invisible {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

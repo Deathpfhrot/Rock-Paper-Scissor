@@ -12,24 +12,24 @@
 <body id="main-body">
     <form action="" onsubmit="return false">
         <div class="rounds-question">
-            <h2>How many rounds?</h2>
-            <div class="container-rounds">
+            <h2 id="headline">How many rounds?</h2>
+            <div id="roundRemoves" class="container-rounds">
                 <div>
-                    <input type="radio" name="rounds" id="number5">
+                    <input onclick="setTries(this.value)" type="radio" name="rounds" id="number5" value="5">
                     <label for="number5">5</label>
                 </div>
                 <div>
-                    <input type="radio" name="rounds" id="">
+                    <input onclick="setTries(this.value)" type="radio" name="rounds" id="number10" value="10">
                     <label for="number10">10</label>
                 </div>
             </div>
-            <div class="container-rounds">
+            <div id="roundRemoves2" class="container-rounds">
                 <div>
-                    <input type="radio" name="rounds" id="">
+                    <input onclick="setTries(this.value)" type="radio" name="rounds" id="number15" value="15">
                     <label for="number15">15</label>
                 </div>
                 <div>
-                    <input type="radio" name="rounds" id="">
+                    <input onclick="setTries(this.value)" type="radio" name="rounds" id="number20" value="20">
                     <label for="number20">20</label>
                 </div>
             </div>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="rounds-question-1">
-            <h2><span id="computer-choice"></span><span id="user-choice"></span><span id="result"></span>
+            <h2 id="finisher"><span id="computer-choice"></span><span id="user-choice"></span><span id="result"></span>
             </h2>
         </div>
 

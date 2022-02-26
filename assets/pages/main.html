@@ -39,13 +39,13 @@
             <h2>Current Score</h2>
             <div class="container-rounds">
                 <div>
-                    <h2>0</h2>
+                    <h2 id="playerOne">0</h2>
                 </div>
                 <div>
                     <h2>:</h2>
                 </div>
                 <div>
-                    <h2>0</h2>
+                    <h2 id="player-computer">0</h2>
                 </div>
             </div>
             <div class="container-rounds">
@@ -59,19 +59,20 @@
         </div>
 
         <div class="rounds-question-1">
-            <h2>Let's Play</h2>
+            <h2><span id="computer-choice"></span><span id="user-choice"></span><span id="result"></span>
+            </h2>
         </div>
 
         <div class="rounds-question-2">
             <div class="container-rounds">
-                <div class="white-circles">
-                    <img src="../img/cut-ge765c63f8_640.png" alt="">
+                <div class="white-circles" className="options">
+                    <img id="scissors" src="../img/cut-ge765c63f8_640.png" alt="Scissors">
                 </div>
                 <div class="white-circles">
-                    <img class="paper" src="../img/papyrus-gb64507cbc_1280.png" alt="">
+                    <img id="paper" class="paper" src="../img/papyrus-gb64507cbc_1280.png" alt="paper">
                 </div>
                 <div class="white-circles">
-                    <img class="stone" src="../img/stone-g8626a3079_640.png" alt="">
+                    <img id="rock" class="stone" src="../img/stone-g8626a3079_640.png" alt="stone">
                 </div>
             </div>
         </div>
@@ -95,7 +96,7 @@
 
 
     <script src="https://kit.fontawesome.com/5523580bc8.js" crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 
